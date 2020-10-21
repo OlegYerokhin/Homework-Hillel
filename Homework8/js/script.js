@@ -43,7 +43,7 @@ function createUser () {
 (createUser({functionResult}));
 
 /////////////////////////////////////////////////////////////////
-// 8.3
+// 8.3.1
 
 function lowNumber (enteredNumber) {
     alert('Too low!')
@@ -63,5 +63,32 @@ function mainFunction (enteredNumber, lowNumber, highNumber) {
 
 mainFunction();
 let enteredNumber = prompt('Enter your number!','');
+
+mainFunction(enteredNumber, lowNumber, highNumber);
+
+/////////////////////////////////////////////////////////////////
+// 8.3.2
+
+function mainFunction(enteredNumber, lowNumber, highNumber) {
+    if (enteredNumber < 100) {
+        
+        lowNumber();
+    } else if (enteredNumber > 100) {
+        
+        highNumber();
+    }
+  
+}
+
+let enteredNumber = prompt('Enter your number!','');
+
+mainFunction(enteredNumber, 
+    function(enteredNumber) {
+        alert('Too low!')
+    },
+    function(enteredNumber) {
+        alert('Too much!')
+    },
+)
 
 mainFunction(enteredNumber, lowNumber, highNumber);
