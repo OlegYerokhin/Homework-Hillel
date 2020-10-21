@@ -45,24 +45,23 @@ function createUser () {
 /////////////////////////////////////////////////////////////////
 // 8.3
 
-function mainFunction () {
-    const enterNumber = prompt('Enter your number!','');
-    let message;
-
-    if (enterNumber < 100) {
-        function lowNumber () {
-            message = 'Your number is lower than 100!';
-            return message;
-        }
-        lowNumber();
+function lowNumber (enteredNumber) {
+    alert('Too low!')
+};
+function highNumber (enteredNumber) {
+    alert('Too much!')
+};
+function mainFunction (enteredNumber, lowNumber, highNumber) {
+    if (enteredNumber < 100) {
         
-    } else {
-        function highNumber () {
-            message = 'Your number is over than 100!';
-            return message;
-        }
+        lowNumber();
+    } else if (enteredNumber > 100) {
+        
         highNumber();
     }
-    return message;
 }
-alert(mainFunction());
+
+mainFunction();
+let enteredNumber = prompt('Enter your number!','');
+
+mainFunction(enteredNumber, lowNumber, highNumber);
