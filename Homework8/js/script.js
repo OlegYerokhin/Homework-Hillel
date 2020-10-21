@@ -23,24 +23,24 @@ if (degree == 0) {
 /////////////////////////////////////////////////////////////////
 // 8.2
 
-function createUser () {
-    let firstName = prompt('Enter your first name!','');
-    let lastName = prompt('Enter your last name!','');
-    let age = prompt('How old are you?','');
+let firstName = prompt('Enter your first name!','');
+let lastName = prompt('Enter your last name!','');
+let age = prompt('How old are you?','');
+let functionResult;
 
-    if (firstName === '') {
+function createUser () {
+
+    if (firstName === '' || undefined) {
         firstName = null;
-    } else if (lastName === '') {
+    } else if (lastName === '' || undefined) {
         lastName = null;
-    } else if (age === '') {
+    } else if (age === '' || undefined) {
         age = null;
     }
 
-    let result = 'First Name: ' + firstName + '\n' + 'Second Name: ' + lastName + '\n' + 'Age: ' +  age;
-
-    return result;
+    return functionResult;
 }   
-alert(createUser());
+(createUser({functionResult}));
 
 /////////////////////////////////////////////////////////////////
 // 8.3
