@@ -22,25 +22,19 @@ if (degree == 0) {
 
 /////////////////////////////////////////////////////////////////
 // 8.2
-
-let firstName = prompt('Enter your first name!','');
+let firstName = prompt('Enter your name!','');
 let lastName = prompt('Enter your last name!','');
-let age = prompt('How old are you?','');
-let functionResult;
+let age = prompt('Enter your age!','');
 
-function createUser () {
 
-    if (firstName === '' || undefined) {
-        firstName = null;
-    } else if (lastName === '' || undefined) {
-        lastName = null;
-    } else if (age === '' || undefined) {
-        age = null;
-    }
+function createUser(firstName = undefined, lastName = undefined, age = undefined) {
 
-    return functionResult;
-}   
-(createUser({functionResult}));
+    return {firstName, lastName, age};
+    
+}
+(createUser(firstName, lastName, age));
+
+console.log((createUser(firstName, lastName, age)));
 
 /////////////////////////////////////////////////////////////////
 // 8.3.1
